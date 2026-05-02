@@ -1,0 +1,41 @@
+{
+  "pipeline_name": "document_intelligence_pipeline",
+  "description": "NLP pipeline for document analysis including summarization, sentiment, NER and QA",
+  "nodes": [
+    {
+      "id": "document_loader",
+      "type": "input",
+      "outputs": ["text"]
+    },
+    {
+      "id": "text_chunker",
+      "type": "processor",
+      "inputs": ["text"],
+      "outputs": ["chunks"]
+    },
+    {
+      "id": "summarizer",
+      "type": "model",
+      "inputs": ["chunks"],
+      "outputs": ["summary"]
+    },
+    {
+      "id": "sentiment_analyzer",
+      "type": "model",
+      "inputs": ["chunks"],
+      "outputs": ["sentiment"]
+    },
+    {
+      "id": "entity_extractor",
+      "type": "model",
+      "inputs": ["chunks"],
+      "outputs": ["entities"]
+    },
+    {
+      "id": "qa_chatbot",
+      "type": "model",
+      "inputs": ["text"],
+      "outputs": ["answers"]
+    }
+  ]
+}
