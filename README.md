@@ -34,14 +34,14 @@
 
 ## 📸 Demo Screenshot
 
-
 ![Demo](screenshot.png)
 
 ---
 
 ## 🚀 Live Demo
 
-👉Temporary demo (may expire): https://f5a22b668fbafbf895.gradio.live
+👉 Temporary demo (may expire):
+[https://f5a22b668fbafbf895.gradio.live](https://f5a22b668fbafbf895.gradio.live)
 
 ---
 
