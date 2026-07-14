@@ -12,8 +12,6 @@ class SentimentAnalyzer:
         self._model = AutoModelForSequenceClassification.from_pretrained(model_name)
 
     def analyze(self, text: str) -> dict:
-        print("🔥 FIX RUNNING")
-
         safe_text = text[:800]
 
         inputs = self._tokenizer(

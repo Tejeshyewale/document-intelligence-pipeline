@@ -27,7 +27,7 @@ def analyze_document(file, questions_text):
 
 
 with gr.Blocks(title="Document Intelligence Pipeline") as demo:
-    gr.Markdown("# 📄 Document Intelligence Pipeline\nPowered by RocketRide + HuggingFace")
+    gr.Markdown("# 📄 Document Intelligence Pipeline\nBuilt with HuggingFace Transformers + spaCy")
 
     with gr.Row():
         file_input = gr.File(label="Upload PDF or TXT", file_types=['.pdf', '.txt'])

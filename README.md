@@ -97,9 +97,17 @@ python demo/app.py
 ## ⚠️ Known Limitations
 
 - Uses off-the-shelf pretrained models — no fine-tuning on domain-specific data yet
-- QA is extractive only; it returns low-confidence answers for vague or multi-hop questions
-- No automated test suite yet
+- QA is extractive only; now filters out low-confidence answers instead of guessing (see `qa_chatbot/code.py`)
 - Single-document only — no cross-document reasoning
+- Not deployed on any cloud platform — runs locally / via Gradio share link only
+
+## ✅ Recent Fixes
+
+- Added a confidence threshold to the QA node so it says "not confident" instead of returning a bad guess
+- Added error handling to the document loader (missing files, empty files, bad encodings)
+- Filled in `requirements.txt` (was previously empty)
+- Removed leftover debug code
+- Added a basic test suite (`tests/`) covering the chunker and document loader
 
 ---
 
